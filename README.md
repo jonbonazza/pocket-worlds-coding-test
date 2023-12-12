@@ -50,7 +50,13 @@ By default, one web service instance will run on port 8000, while the other web 
 ### Testing
 
 Swagger UI is available as part of the FastAPI framework that can be used to inspect and test
-the API endpoints of the URL shortener. To access it, start run the web service and go to http://localhost:8000/docs
+the API endpoints of the URL shortener. To access instance 1, go to http://localhost:8000/docs
+
+from there you can generate a short URL and enter the URL that comes back in the response into your browser to be redirected to your target site.
+
+You can also change the port in the resulting URL to `8020` and redirect to the same site from the other web service instance. For instance, if the
+response from your URL shorten request comes back as `http://localhost:8080/1foobar`, then you can enter either that URL or  `http://localhost:8020/1foobar`
+into your browser and be redirected to the same site.
 
 ## Additional Information
 I've added several comments throughout the codebase regarding how I would change improve things if this were a production service, both from a code stand point, as well as an architecture stand point.
